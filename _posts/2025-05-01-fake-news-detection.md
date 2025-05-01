@@ -101,6 +101,6 @@ We ran:
 
 ## 🚀 Try It Out or Read More
 
-📂 GitHub: [link to your repo]  
+📂 GitHub: https://github.com/ankit5107tamu/Fake-News-Detection/  
 🧠 Blog powered by GitHub Pages & Jekyll  
-✉️ Contact: [your email or LinkedIn]
+✉️ Contact: ankit_5107@tamu.edu
