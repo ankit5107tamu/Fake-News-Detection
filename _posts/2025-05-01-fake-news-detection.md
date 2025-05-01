@@ -25,12 +25,15 @@ These studies highlight the importance of incorporating emotional cues alongside
 ## 🛠️ Our Approach
 
 We built a two-stage pipeline:
-
+The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.1:
+![Fake News Pipeline](/assets/images/model_image.png)
 ### 1️⃣ EmoLLM for Affective Analysis
 - We input each news piece into **EmoLLM** (LLaMA2/OPT/BLOOM based)
 - EmoLLM outputs:
   - **Sentiment** (positive/negative/neutral)
+![Fake News Pipeline](/assets/images/senti_claim_image.png)
   - **Emotion intensity** (0–1 score)
+![Fake News Pipeline](/assets/images/emo_score_image.png)
 
 ### 2️⃣ LLaMA 3.1 for Classification
 - We feed the news + emotion data into **LLaMA 3.1 8B Instruct**
