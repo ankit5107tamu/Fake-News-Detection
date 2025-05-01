@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fake News Detection Using EmoLLM + LLaMA"
+title: "Fake News Detection Using Sentiment and Emotion Analysis"
 date: 2025-05-01
 ---
 
@@ -97,6 +97,15 @@ We ran:
 - Apply to other datasets (COVID-19, CoAID, etc.)
 - Add **explainability**: Why does the model say it's fake?
 
+---
+
+### 👥 Contributors
+
+- **Ankit Kumar Sahoo**  
+  📧 [ankit_5107@tamu.edu](mailto:ankit_5107@tamu.edu)
+
+- **Sushmitha Bangarwa**  
+  📧 [sushimtha_bangarwa@tamu.edu](mailto:sushimtha_bangarwa@tamu.edu)
 ---
 
 ## 🚀 Try It Out or Read More
