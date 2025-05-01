@@ -12,7 +12,13 @@ date: 2025-05-01
 
 ## 🔍 Introduction
 
-Misinformation is everywhere — social media, websites, news portals. But fake news detection is still hard. Many claims *look* believable. That’s why we combined emotional and sentiment analysis with large language models to improve how we detect fakes.
+Misinformation is everywhere — social media, websites, news portals. But fake news detection is still hard. Many claims *look* believable. Traditional fake news detection methods rely heavily on surface-level textual cues. The existing models trained specifically for this problem involve either complex fine-tuning or do not take context into account when classifying news as fake or real. That’s why we combined emotional and sentiment analysis with large language models to to deepen semantic understanding and improve classification accuracy.
+
+---
+## 🔍 Related Works
+- RaemoLLM: Uses emotion-aware LLMs to construct a retrieval-based affective embedding database for misinformation detection.
+- LEMMA: A multimodal framework that enhances large vision-language models (LVLMs) by incorporating external knowledge and affective reasoning for misinformation classification.
+These studies highlight the importance of incorporating emotional cues alongside raw textual information.
 
 ---
 
@@ -54,14 +60,18 @@ We ran:
 
 ## 📊 Results (Highlights)
 
-| Method                   | Dataset | Accuracy | F1 Score |
+| Method-LLama-3.1-8B model| Dataset | Accuracy | F1 Score |
 |--------------------------|---------|----------|----------|
 | Zero-shot (baseline)     | LIAR    | 0.35     | 0.18     |
-| + EmoLLM                 | LIAR    | 0.35     | 0.18     |
-| + Ranking                | LIAR    | 0.65     | 0.66 ✅   |
+| + EmoLLM (zero-shot)     | LIAR    | 0.35     | 0.18     |
+| + EmoLLM (few-shot)      | LIAR    | 0.35     | 0.18     |
+| + Ranking (zero-shot)    | LIAR    | 0.40     | 0.28     |
+| + Ranking (few-shot)     | LIAR    | 0.65     | 0.66 ✅  |
 | Zero-shot (baseline)     | PHEME   | 0.55     | 0.40     |
-| + EmoLLM                 | PHEME   | 0.62     | 0.48     |
-| + Ranking                | PHEME   | 0.57     | 0.54 ✅   |
+| + EmoLLM (zero-shot)     | PHEME   | 0.62     | 0.48     |
+| + EmoLLM (few-shot)      | PHEME   | 0.62     | 0.48     |
+| + Ranking (zero-shot)    | PHEME   | 0.57     | 0.52     |
+| + Ranking (few-shot)     | PHEME   | 0.57     | 0.54 ✅  |
 
 ✅ **Takeaways:**
 - **PHEME** benefits from emotion-aware prompts
