@@ -3,7 +3,7 @@ layout: post
 title: "Fake News Detection Using Sentiment and Emotion Analysis"
 date: 2025-05-01
 ---
-
+<link rel="stylesheet" href="/Fake-News-Detection/assets/css/dark-theme.css">
 # 🧠 Fake News Detection Using EmoLLM + LLaMA 3.1
 
 > How emotion-aware analysis and large language models helped us identify misinformation better.
