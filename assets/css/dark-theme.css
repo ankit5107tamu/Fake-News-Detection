@@ -13,23 +13,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-code {
-  background-color: #222;
-  color: #ffffff;
-}
 table {
-  background-color: #111;      /* Dark background */
-  color: #fff;                 /* White text */
+  background-color: #111;
+  color: #ffffff;
   border-collapse: collapse;
   width: 100%;
 }
 
 th, td {
-  border: 1px solid #444;      /* Visible dark border */
+  border: 1px solid #444;
   padding: 10px;
 }
 
 th {
-  background-color: #222;      /* Darker background for header */
+  background-color: #222;
   font-weight: bold;
+}
+
+code {
+  background-color: #222;
+  color: #ffffff;
 }
