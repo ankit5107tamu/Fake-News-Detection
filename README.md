@@ -99,7 +99,7 @@ LLama Classfier
  source activate <env_name>
  export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
  </pre>
-In LLama baseline method  & LLama + Emotional and Sentimental Analysis, change the model path , input and output files as necessary in the config section of the script.
+In LLama baseline method  & LLama + Emotional and Sentimental Analysis, change the model path , few-shot/zero-shot mode input and output files as necessary in the config section of the script.
 LLama baseline method run: 
 - LIAR dataset
 <pre>
@@ -112,9 +112,15 @@ LLama baseline method run:
  python eval_accuracy_from_predictions.py output_csv_file_name
 </pre>
 LLama + Emotional and Sentimental Analysis: 
+- LIAR dataset
+<pre>
+python fs_infer_mutliclass_emo.py
+python eval_no_binary_true_label.py output_csv_file_name
+</pre>
+- PHEME dataset
 <pre>
 python fs_infer_strategic_sentiment.py
-python eval_no_binary_true_label.py output_csv_file_name
+python eval_accuracy_from_predictions.py output_csv_file_name
 </pre>
 Few-shot/Zero-shot Rank Method:
 <pre>
