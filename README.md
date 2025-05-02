@@ -43,7 +43,11 @@ Install dependencies
   bash src/run_inference.sh
 </pre>
 
-Modify the script at line line 16 and 17 to change/rename to desired json input and output
+Modify the script at line line 16 and 17 to change/rename to desired json input and output.
+<pre>
+infer_file=data/pheme_veracity_labels_senti.json
+predict_file=predict_pheme_veracity_labels_senti.json
+</pre>
 
 
 # LLama
@@ -88,3 +92,30 @@ This will output the csv that will be given as input dataset to the llama classi
 
 LLama Classfier
 ---
+<pre>
+ module load Anaconda3/2023.09-0
+ module load GCC/11.3.0
+ source activate <env_name>
+ export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+ </pre>
+In LLama baseline method  & LLama + Emotional and Sentimental Analysis, change the model path , input and output files as necessary in the config section of the script.
+LLama baseline method run: 
+- LIAR dataset
+<pre>
+ python fs_infer_multiclass_debugged.py
+</pre>
+- PHEME dataset
+<pre>
+ python fs_infer_multiclass_patched_prompt.py
+</pre>
+LLama + Emotional and Sentimental Analysis: 
+<pre>
+python fs_infer_strategic_sentiment.py
+</pre>
+Few-shot/Zero-shot Rank Method:
+<pre>
+ python zero_few_shot_rank_inference_binary.py  --input_csv liar_merged_output.csv  --model_path ../llama-3.1-8b-hf --mode zero-shot --output_csv predictions_zeroshot_liar_zero_shot_rank.csv
+</pre>
+
+Evaluation scripts:
+python eval_<script_name> <output_csv>
