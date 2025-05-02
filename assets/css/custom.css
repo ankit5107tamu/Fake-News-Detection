@@ -1,0 +1,32 @@
+body {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Make all text and headings white */
+h1, h2, h3, h4, h5, h6, p, span, div, li, dt, dd, strong, em, b, i {
+  color: #fff !important;
+}
+
+/* Make tables and their text white, with white borders */
+table, th, td {
+  background: #000 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+/* Make sure links are visible */
+a {
+  color: #4FC3F7 !important; /* Light blue for contrast */
+}
+
+/* If your theme uses .muted or .text-muted classes, override them */
+.muted, .text-muted {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* Remove zebra striping or set to a visible dark color */
+tr:nth-child(even) {
+  background-color: #111 !important;
+}
