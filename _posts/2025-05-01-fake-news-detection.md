@@ -37,14 +37,14 @@ The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.
 
 ### 2️⃣ LLaMA 3.1 for Classification
  We have here used LLaMA 3.1 8B Instruct as our base classifier and also the pre-trained model for the emotional analysed data to be fed into. Once the emotional and sentimental analysis is done the EmoLLM for a given new piece/tweet, we append the sentiment analysis and emotional score as data features to the dataset. This modified dataset now has the emotional and sentimental context. This embedded dataset is now passed through LLaMA pre-trained model with zero-shot prompting/few-shot prompting.
-<pr>
+<pre>
 Title: {row['title']}
 Text: {example_text}
 Sentiment: {row['sentiment']}
 Emotion Score: {row['emotion_score']}
 This article has a sentiment of {row['sentiment']} and an emotion score of {row['emotion_score']}.
 Label: {row['label'].upper()}
-</pr>
+</pre>
 
 We adopted another method to improve upon the few-shot, zero shot classification which aimed at reducing the generation bias that large-language models geenrally have towards a safe/default label('TRUE' in our case). Instead of just letting LLaMA generate an answer, we **score both “TRUE” and “FALSE” completions** using log-likelihood and pick the better one as the prediction.
 
