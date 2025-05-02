@@ -1,5 +1,52 @@
 # Fake-News-Detection
 
+## Introduction
+
+This project presents our efforts towards comprehensive affective analysis with large language models (LLMs). (Emollm + Llama)
+Emollm model can be used for affective classification tasks (e.g. sentimental polarity
+or categorical emotions), and regression tasks (e.g. sentiment strength or emotion intensity).
+Llama model can be used for text classification (e.g real or fake)
+
+# EmoLLMs: A Series of Emotional Large Language Models and Annotation Tools for Comprehensive Affective Analysis
+[The EmoLLMs Paper](https://arxiv.org/abs/2401.08508)
+
+Get conda env ready with Python >=3.9
+
+Install dependencies
+<pre>
+	conda install -c conda-forge tzdata=2024a
+	conda install -c conda-forge cudatoolkit=11.2.2 cudnn=8.1.0
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+	pip install tensorflow==2.10.1 tensorboard==2.10.1
+        pip install torch
+        pip install transformers
+        pip install peft
+        pip install pandas
+	pip install tiktoken
+	pip install protobuf==3.19.6
+        pip install sentencepiece==0.1.99
+
+</pre>
+
+
+# Prompt examples
+
+# Emotion intensity
+  Task: Assign a numerical value between 0 (least E) and 1 (most E) to represent the intensity of emotion E expressed in the text. 
+  Text: Building a wall on the U.S.-Mexico border will take literally years. 
+  Intensity Score:
+  Assistant:
+  0.35 
+
+# Extract emotional and sentiment score
+<pre>
+  bash src/run_inference.sh
+</pre>
+
+Modify the script at line line 16 and 17 to change/rename to desired json input and output
+
+
+# LLama
 Get conda env ready with Python >=3.10
 
 Download Llama-3.1-8B from https://www.llama.com/llama-downloads/ ; follow the commands mentioned in the website 
@@ -13,8 +60,6 @@ pip install sentencepiece
 
 python ./src/transformers/models/llama/convert_llama_weights_to_hf.py  --input_dir ~/.llama/checkpoints/Llama3.1-8B-Instruct/  --model_size 8B  --output_dir ../../llama-3.1-8b-hf  --instruct --llama_version 3.1 </pre>
 
-EmoLLM stuff
----
 
 
 Append EmoLLM output to dataset
