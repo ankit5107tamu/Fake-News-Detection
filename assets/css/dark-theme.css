@@ -13,17 +13,23 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-table {
-  color: #ffffff;
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid #ffffff;
-  padding: 8px;
-}
-
 code {
   background-color: #222;
   color: #ffffff;
+}
+table {
+  background-color: #111;      /* Dark background */
+  color: #fff;                 /* White text */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #444;      /* Visible dark border */
+  padding: 10px;
+}
+
+th {
+  background-color: #222;      /* Darker background for header */
+  font-weight: bold;
 }
