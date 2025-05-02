@@ -104,21 +104,21 @@ LLama baseline method run:
 - LIAR dataset
 <pre>
  python fs_infer_multiclass_debugged.py
- python eval_no_binary_true_label.py <output_csv>
+ python eval_no_binary_true_label.py output_csv_file_name
 </pre>
 - PHEME dataset
 <pre>
  python fs_infer_multiclass_patched_prompt.py
- python eval_accuracy_from_predictions.py <output_csv>
+ python eval_accuracy_from_predictions.py output_csv_file_name
 </pre>
 LLama + Emotional and Sentimental Analysis: 
 <pre>
 python fs_infer_strategic_sentiment.py
-python eval_no_binary_true_label.py <output_csv>
+python eval_no_binary_true_label.py output_csv_file_name
 </pre>
 Few-shot/Zero-shot Rank Method:
 <pre>
  python zero_few_shot_rank_inference_binary.py  --input_csv liar_merged_output.csv  --model_path ../llama-3.1-8b-hf --mode zero-shot --output_csv predictions_zeroshot_liar_zero_shot_rank.csv
- python eval_binary_predictions.py <output_csv>
+ python eval_binary_predictions.py output_csv_file_name
 </pre>
 
