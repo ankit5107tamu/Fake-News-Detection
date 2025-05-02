@@ -36,12 +36,17 @@ The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/emo_score_image.png)
 
 ### 2️⃣ LLaMA 3.1 for Classification
-- We feed the news + emotion data into **LLaMA 3.1 8B Instruct**
-- Use either:
-  - Zero-shot or few-shot prompts
-  - **Ranking inference** to reduce bias
+ We have here used LLaMA 3.1 8B Instruct as our base classifier and also the pre-trained model for the emotional analysed data to be fed into. Once the emotional and sentimental analysis is done the EmoLLM for a given new piece/tweet, we append the sentiment analysis and emotional score as data features to the dataset. This modified dataset now has the emotional and sentimental context. This embedded dataset is now passed through LLaMA pre-trained model with zero-shot prompting/few-shot prompting.
+<pr>
+Title: {row['title']}
+Text: {example_text}
+Sentiment: {row['sentiment']}
+Emotion Score: {row['emotion_score']}
+This article has a sentiment of {row['sentiment']} and an emotion score of {row['emotion_score']}.
+Label: {row['label'].upper()}
+</pr>
 
-> Instead of just letting LLaMA generate an answer, we **score both “TRUE” and “FALSE” completions** using log-likelihood and pick the better one.
+We adopted another method to improve upon the few-shot, zero shot classification which aimed at reducing the generation bias that large-language models geenrally have towards a safe/default label('TRUE' in our case). Instead of just letting LLaMA generate an answer, we **score both “TRUE” and “FALSE” completions** using log-likelihood and pick the better one as the prediction.
 
 ---
 
@@ -55,9 +60,9 @@ We tested on two datasets:
 | **PHEME** | Twitter rumor threads, emotionally rich |
 
 We ran:
-- Zero-shot and few-shot prompts
-- With and without sentiment/emotion
-- And used ranking vs generation inference
+- LLaMA-3.1-8b for zero-shot classifications the baseline method, against which we would compare our approach. 
+- The output we got from the EmoLLM was appended to the dataset and this new embedded daatset was run on the Llama classifier with zero-shot and few-shot prompting.
+- And used ranking experiments were run combined with zero-shot and few-shot promopting to mitigate generation bias.
 
 ---
 
