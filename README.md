@@ -90,7 +90,7 @@ Modify the script at line 13 and line 19 to change/rename to desired json input 
 
 This will output the csv that will be given as input dataset to the llama classifer
 
-LLama Classfier
+LLama Classifier
 ---
 <pre>
  cd code/llama_classifier
