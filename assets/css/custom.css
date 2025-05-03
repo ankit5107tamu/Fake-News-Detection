@@ -1,59 +1,90 @@
+/* General body and text */
 body {
   background: #000 !important;
   color: #fff !important;
 }
 
-/* Make all text and headings white */
-h1, h2, h3, h4, h5, h6, p, span, div, li, dt, dd, strong, em, b, i {
+/* Headings and text elements */
+h1, h2, h3, h4, h5, h6,
+p, span, div, li, dt, dd, strong, em, b, i {
   color: #fff !important;
 }
 
-/* Make tables and their text white, with white borders */
+/* Links */
+a {
+  color: #4FC3F7 !important;
+}
+
+/* Tables */
 table, th, td {
   background: #000 !important;
   color: #fff !important;
   border: 1px solid #fff !important;
 }
 
-/* Make sure links are visible */
-a {
-  color: #4FC3F7 !important; /* Light blue for contrast */
+tr:nth-child(even) {
+  background-color: #111 !important;
 }
 
-/* If your theme uses .muted or .text-muted classes, override them */
+/* Remove faded/muted styles */
 .muted, .text-muted {
   color: #fff !important;
   opacity: 1 !important;
 }
 
-/* Remove zebra striping or set to a visible dark color */
-tr:nth-child(even) {
-  background-color: #111 !important;
-}
-
-/* Make code blocks readable on dark background */
+/* Code blocks and inline code */
 pre, code {
-  background: #222 !important;  /* Slightly lighter than black for contrast */
-  color: #fff !important;       /* White text */
+  background: #222 !important;
+  color: #fff !important;
   border-radius: 8px !important;
   border: 1px solid #444 !important;
   font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace !important;
 }
 
-/* For inline code */
+/* Inline code */
 code {
   padding: 2px 6px !important;
   font-size: 1em !important;
 }
 
-/* For fenced code blocks */
+/* Fenced code blocks */
 pre {
   padding: 16px !important;
   overflow-x: auto !important;
 }
 
-/* If your theme uses .highlight for code blocks */
+/* Syntax highlighting blocks (Jekyll/Cayman) */
 .highlight, .highlight pre, .highlight code {
   background: #222 !important;
   color: #fff !important;
+}
+
+/* Blockquotes */
+blockquote {
+  background: #111 !important;
+  color: #fff !important;
+  border-left: 4px solid #4FC3F7 !important;
+  padding: 8px 16px !important;
+}
+
+/* Horizontal rule */
+hr {
+  border-color: #444 !important;
+}
+
+/* Remove box shadow from main content (if any) */
+.main-content {
+  box-shadow: none !important;
+}
+
+/* Misc: Ensure forms, inputs, buttons are visible */
+input, textarea, select, button {
+  background: #222 !important;
+  color: #fff !important;
+  border: 1px solid #4FC3F7 !important;
+}
+
+/* Remove background from images (optional, for PNGs) */
+img {
+  background: transparent !important;
 }
