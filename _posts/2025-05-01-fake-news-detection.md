@@ -18,6 +18,7 @@ Misinformation is everywhere — social media, websites, news portals. But fake 
 
 ##  Related Works
 - RaemoLLM:  This framework achieves misinformation detection by using an emotion-aware language model to build a retrieval database composed of affective embeddings. The retrieval module then uses this database to fetch source-domain examples, which are fed into the inference module for in-context few-shot learning aimed at detecting misinformation in the target domain.
+  
 - LEMMA: LEMMA framework builds on the intuitive understanding and reasoning abilities of LVLMs, enriching them with external knowledge to improve misinformation detection accuracy. Its external knowledge module uses techniques like multi-query generation and image source verification to strengthen the depth and reliability of the model’s reasoning process.
 
 
@@ -25,20 +26,22 @@ Misinformation is everywhere — social media, websites, news portals. But fake 
 ##  Our Approach
 
 We built a two-stage pipeline:  
+
 The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.1:.  
+
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/model_image.png)
+
 ### 1. EmoLLM for Affective Analysis
 
  One of the models we incorporated in this project is EmoLLM (Emotion-aware Large Language Model). While not the centerpiece of our work, EmoLLM is a valuable tool that goes beyond standard text analysis by detecting both sentiment and specific emotions within a piece of text. This means it can pick up on whether an article is positive, negative, or neutral, identify underlying emotions like anger, joy, or fear and also extract emotional and sentimental score. Using EmoLLM in our project helped add another layer of understanding to the data, making it possible to analyze not just what is being said, but also the emotional undertones behind it. This is particularly useful in tasks like fake news detection, where emotional manipulation can play a significant role.
  
--> We input each news piece into **EmoLLM** (LLaMA2/OPT/BLOOM based) 
-
--> EmoLLM outputs:
+Each data point is fed into **EmoLLM** (LLaMA2/OPT/BLOOM based) which outputs:
 
 **Sentiment** (positive/negative/neutral)  
 
 
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/senti_claim_image.png)
+
 
 
 **Emotion intensity** (0–1 score)  
@@ -134,4 +137,3 @@ We ran:
 
 📂 GitHub: https://github.com/ankit5107tamu/Fake-News-Detection/  
 🧠 Blog powered by GitHub Pages & Jekyll  
-✉️ Contact: ankit_5107@tamu.edu
