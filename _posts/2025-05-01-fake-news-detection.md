@@ -51,13 +51,14 @@ We adopted another method to improve upon the few-shot, zero shot classification
 
 
 ##  Demo
-<iframe width="560" height="315"
-  src=""https://www.youtube.com/embed/_lv-eTEePM4"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+Here is a demonstration of the model in action:
+
+<div style="text-align:center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_lv-eTEePM4"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+  </iframe>
+</div>
+
 
 ##  Datasets & Experiments
 
