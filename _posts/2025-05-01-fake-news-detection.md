@@ -17,9 +17,8 @@ Misinformation is everywhere — social media, websites, news portals. But fake 
 
 
 ##  Related Works
-- RaemoLLM: Uses emotion-aware LLMs to construct a retrieval-based affective embedding database for misinformation detection.
-- LEMMA: A multimodal framework that enhances large vision-language models (LVLMs) by incorporating external knowledge and affective reasoning for misinformation classification.
-These studies highlight the importance of incorporating emotional cues alongside raw textual information.
+- RaemoLLM:  This framework achieves misinformation detection by using an emotion-aware language model to build a retrieval database composed of affective embeddings. The retrieval module then uses this database to fetch source-domain examples, which are fed into the inference module for in-context few-shot learning aimed at detecting misinformation in the target domain.
+- LEMMA: LEMMA framework builds on the intuitive understanding and reasoning abilities of LVLMs, enriching them with external knowledge to improve misinformation detection accuracy. Its external knowledge module uses techniques like multi-query generation and image source verification to strengthen the depth and reliability of the model’s reasoning process.
 
 
 
