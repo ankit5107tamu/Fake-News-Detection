@@ -1,4 +1,12 @@
 /* General body and text */
+header,
+.site-header,
+.wrapper > h1,
+h1.site-title,
+h1 {
+  display: none !important;
+}
+
 body {
   background: #000 !important;
   color: #fff !important;
