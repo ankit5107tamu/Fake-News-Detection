@@ -37,9 +37,14 @@ The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.
 -> EmoLLM outputs:
 
 **Sentiment** (positive/negative/neutral)  
+
+
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/senti_claim_image.png)
 
+
 **Emotion intensity** (0–1 score)  
+
+
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/emo_score_image.png)
 
 ### 2. LLaMA 3.1 for Classification
