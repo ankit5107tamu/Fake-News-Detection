@@ -30,3 +30,30 @@ a {
 tr:nth-child(even) {
   background-color: #111 !important;
 }
+
+/* Make code blocks readable on dark background */
+pre, code {
+  background: #222 !important;  /* Slightly lighter than black for contrast */
+  color: #fff !important;       /* White text */
+  border-radius: 8px !important;
+  border: 1px solid #444 !important;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace !important;
+}
+
+/* For inline code */
+code {
+  padding: 2px 6px !important;
+  font-size: 1em !important;
+}
+
+/* For fenced code blocks */
+pre {
+  padding: 16px !important;
+  overflow-x: auto !important;
+}
+
+/* If your theme uses .highlight for code blocks */
+.highlight, .highlight pre, .highlight code {
+  background: #222 !important;
+  color: #fff !important;
+}
