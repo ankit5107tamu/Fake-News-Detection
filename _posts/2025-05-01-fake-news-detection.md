@@ -50,6 +50,14 @@ Label: {row['label'].upper()}
 We adopted another method to improve upon the few-shot, zero shot classification which aimed at reducing the generation bias that large-language models geenrally have towards a safe/default label('TRUE' in our case). Instead of just letting LLaMA generate an answer, we **score both “TRUE” and “FALSE” completions** using log-likelihood and pick the better one as the prediction.
 
 
+##  Demo
+<iframe width="560" height="315"
+  src=""https://www.youtube.com/embed/_lv-eTEePM4"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
 
 ##  Datasets & Experiments
 
