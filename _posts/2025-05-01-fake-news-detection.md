@@ -37,14 +37,14 @@ The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.
  
 Each data point is fed into **EmoLLM** (LLaMA2/OPT/BLOOM based) which outputs:
 
-**Sentiment** (positive/negative/neutral)  
+**Sentiment Classifciation** (positive/negative/neutral)  
 
 
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/senti_claim_image.png)
 
 
 
-**Emotion intensity** (0–1 score)  
+**Emotional score** (0–1 score)  
 
 
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/emo_score_image.png)
