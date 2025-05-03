@@ -32,10 +32,13 @@ The flow diagram we used to combine sentiment and emotion analysis with LLaMA 3.
 
  One of the models we incorporated in this project is EmoLLM (Emotion-aware Large Language Model). While not the centerpiece of our work, EmoLLM is a valuable tool that goes beyond standard text analysis by detecting both sentiment and specific emotions within a piece of text. This means it can pick up on whether an article is positive, negative, or neutral, identify underlying emotions like anger, joy, or fear and also extract emotional and sentimental score. Using EmoLLM in our project helped add another layer of understanding to the data, making it possible to analyze not just what is being said, but also the emotional undertones behind it. This is particularly useful in tasks like fake news detection, where emotional manipulation can play a significant role.
  
--> We input each news piece into **EmoLLM** (LLaMA2/OPT/BLOOM based)
+-> We input each news piece into **EmoLLM** (LLaMA2/OPT/BLOOM based) 
+
 -> EmoLLM outputs:
+
 **Sentiment** (positive/negative/neutral)  
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/senti_claim_image.png)
+
 **Emotion intensity** (0–1 score)  
 ![Fake News Pipeline](/Fake-News-Detection/assets/images/emo_score_image.png)
 
@@ -100,11 +103,9 @@ We ran:
 
 
 
-##  What We Learned
+##  Conclusion
 
-- EmoLLM helps when text is **emotion-rich** (PHEME)
-- Ranking-based classification outperforms naive generation
-- LIAR doesn’t benefit from sentiment — it's too short/formal
+ Incorporating EmoLLM to the classification model proves that emotional/senntimental-context aids in improvement in the classification. PHEME being rich in emotional/sentimental tone results in improvement in accuracy but that is not the case with LIAR which consists short, concise facts lacking much emotional/sentimental tone.  We also see the generation bias of LLMs towards default/safe labels comes into play when we are doing generation based classification. Ranking-based classification helped in mitigating this shortcoming outperforms naive generation.
 
 
 
